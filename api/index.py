@@ -30,7 +30,7 @@ def login():
         username = request.form["username"]
         password = md5_hash(request.form["password"])
         try:
-            r = requests.post("http://47.99.135.189:8080/wx/auth/login", json={
+            r = requests.post("https://proxy-login-avenzo.onrender.com/auth/login", json={
                 "username": username,
                 "password": password
             })
